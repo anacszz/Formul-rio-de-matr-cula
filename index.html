@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+
+  <link rel="stylesheet" href="styles/index.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Poppins:wght@400;500;600&display=swap"
+    rel="stylesheet"/>
+</head>
+
+<body>
+  <header>
+      <div class="container-back">
+        <img src="assets/icons/arrow-left-02.svg" alt="flecha" />
+        <span>Voltar</span>
+      </div>
+
+      <div class="container-intro">
+        <h1>Formulário de matrícula</h1>
+        <p>
+          Preencha os dados abaixo para matricular seu filho na escola de
+          educação infantil Estrelas do Amanhã.
+        </p>
+      </div>
+    </header>
+
+    <form>
+      <section class="container-informations">
+        <h3>Informações da criança</h3>
+
+        <div class="container-input">
+          <label>Nome completo</label>
+          <input class="input-default" />
+        </div>
+
+        <div class="container-input">
+          <label>Data de nascimento</label>
+          <input class="input-default" type="date" />
+        </div>
+
+        <div class="container-input">
+          <label>Sexo</label>
+          <select class="input-default">
+            <option>Masculino</option>
+            <option>Feminino</option>
+          </select>
+        </div>
+        <div class="container-input">
+          <label>Informações médicas</label>
+          <textarea class=""></textarea>
+        </div>
+
+        <div class="container-input">
+          <label>Certidão de nascimento</label>
+          <input type="file" />
+        </div>
+      </section>
+    </form>
+</body>
+</html>
