@@ -1,0 +1,24 @@
+.dropzone {
+  border: 1px dashed var(--stroke-default);
+  border-radius: 7px;
+  display: grid;
+  justify-items: center;
+  gap: .5rem;
+  text-align: center;
+  padding: 1.75rem 1rem;
+  position: relative;
+}
+
+.drop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  opacity: 0;
+
+}
+
+.textdrop {
+  color: #a8a29e;
+  font-size: small;
+}

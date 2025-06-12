@@ -1,66 +1,243 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulário</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
 
-  <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/index.css" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Poppins:wght@400;500;600&display=swap"
-    rel="stylesheet"/>
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-  <header>
-      <div class="container-back">
-        <img src="assets/icons/arrow-left-02.svg" alt="flecha" />
-        <span>Voltar</span>
-      </div>
+  <body>
+    <div id="app">
+      <main class="content-main">
+        <div class="container">
+          <header>
+            <div class="container-back">
+              <img src="assets/icons/arrow-left-02.svg" alt="flecha" />
+              <span>Voltar</span>
+            </div>
 
-      <div class="container-intro">
-        <h1>Formulário de matrícula</h1>
-        <p>
-          Preencha os dados abaixo para matricular seu filho na escola de
-          educação infantil Estrelas do Amanhã.
-        </p>
-      </div>
-    </header>
+            <div class="container-intro">
+              <h1>Formulário de matrícula</h1>
+              <p>
+                Preencha os dados abaixo para matricular seu filho na escola de
+                educação infantil Estrelas do Amanhã.
+              </p>
+            </div>
+          </header>
 
-    <form>
-      <section class="container-informations">
-        <h3>Informações da criança</h3>
+          <form enctype="multipart/form-data">
+            <section class="container-informations">
+              <h3>Informações da criança</h3>
 
-        <div class="container-input">
-          <label>Nome completo</label>
-          <input class="input-default" />
+              <div class="container-input">
+                <label>Nome completo</label>
+                <input class="input-default" />
+              </div>
+
+              <div class="container-input">
+                <label>Data de nascimento</label>
+                <input class="input-default" type="date" />
+              </div>
+
+              <div class="container-input">
+                <label>Sexo</label>
+                <select class="input-default">
+                  <option>Masculino</option>
+                  <option>Feminino</option>
+                </select>
+              </div>
+
+              <div class="container-input">
+                <label>Informações médicas</label>
+                <textarea class="infomed" placeholder="A criança possui alguma condição médica que a escola deve estar ciente? (Se sim, especifique)"></textarea>
+              </div>
+
+              <div  class="droparea-wrapper">
+                <label>Certidão de nascimento</label>
+
+                <div class="dropzone">
+                  <input class="drop" type="file" />
+                  <img src="assets/icons/cloud-upload.svg" alt="">
+                  <p class="textdrop" >Clique aqui para <br>
+                  selecionar os arquivos</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="container-informations">
+              <h3>Endereço residencial</h3>
+
+              <div class="container-input">
+                <label>CEP</label>
+                <input class="input-default" />
+              </div>
+
+              <div class="container-address">
+                <div>
+                  <label>Rua</label>
+                  <input class="street" />
+                </div>
+
+                <div>
+                  <label>Número</label>
+                  <input class="number" />
+                </div>
+              </div>
+
+              <div class="container-address">
+                <div>
+                  <label>Cidade</label>
+                  <input class="street" />
+                </div>
+
+                <div>
+                  <label>Estado</label>
+                  <input class="number" />
+                </div>
+              </div>
+            </section>
+
+            <section class="container-informations">
+              <h3>Informações da criança</h3>
+
+              <div class="container-input">
+                <label>Nome do responsável</label>
+                <input class="input-default" />
+              </div>
+
+              <span>Principal responsável legal e contato de emergência</span>
+
+              <div class="container-input">
+                <label>Telefone</label>
+                <input class="input-default" />
+              </div>
+
+              <div class="container-input">
+                <label>E-mail</label>
+                <input class="input-default" type="email" />
+              </div>
+            </section>
+
+            <section class="container-registration">
+              <h3>Opções de matrícula</h3>
+              <span>Selecione o turno de estudo</span>
+
+              <div class="container-study-shift">
+                <div class="content-study-shift">
+                  <input type="radio" />
+
+                  <div>
+                    <img src="assets/icons/sun-cloud-02.svg" alt="nuvem" />
+                    <label>Manhã</label>
+                  </div>
+                </div>
+
+                <div class="content-study-shift">
+                  <input type="radio" />
+
+                  <div>
+                    <img src="assets/icons/sun-02.svg" alt="sol" />
+                    <label>Tarde</label>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="container-sport">
+              <span>Em qual esporte você gostaria de inscrever seu filho?</span>
+
+              <div class="content-sport">
+                <div class="card-sport">
+                  <input type="radio" />
+
+                  <div>
+                    <img src="assets/icons/football.svg" alt="nuvem" />
+                    <label>Futebol</label>
+                  </div>
+                </div>
+                <div class="card-sport">
+                  <input type="radio" />
+
+                  <div>
+                    <img src="assets/icons/basketball-02.svg" alt="nuvem" />
+                    <label>Basquete</label>
+                  </div>
+                </div>
+                <div class="card-sport">
+                  <input type="radio" />
+
+                  <div>
+                    <img src="assets/icons/swimming.svg" alt="nuvem" />
+                    <label>Natação</label>
+                  </div>
+                </div>
+                <div class="card-sport">
+                  <input type="radio" />
+
+                  <div>
+                    <img src="assets/icons/yoga-02.svg" alt="nuvem" />
+                    <label>Yoga</label>
+                  </div>
+                </div>
+                <div class="card-sport">
+                  <input type="radio" />
+
+                  <div>
+                    <img src="assets/icons/volleyball.svg" alt="nuvem" />
+                    <label>Volley</label>
+                  </div>
+                </div>
+                <div class="card-sport">
+                  <input type="radio" />
+
+                  <div>
+                    <img src="assets/icons/boxing-glove-01.svg" alt="nuvem" />
+                    <label>Boxe</label>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <div class="terms">
+              <input type="checkbox" />
+              <label>
+                Declaro que li e concordo com os
+                <strong>Termos e Condições</strong> e com a
+                <strong>Política de Privacidade</strong>
+                da escola Estrela do Amanhã.
+              </label>
+            </div>
+
+            <div class="container-buttons">
+              <button class="save-response">Salvar respostas</button>
+              <button class="register">Fazer matrícula</button>
+            </div>
+          </form>
         </div>
+      </main>
 
-        <div class="container-input">
-          <label>Data de nascimento</label>
-          <input class="input-default" type="date" />
+      <aside>
+        <div class="aside-container">
+          <header>
+            <img src="assets/icons/logoestrelas.png" alt="logo estrelas do Amanhã">
+            <h2>Porque cada momento de 
+              <span class="orange">aprendizado</span> conta</h2>
+            <p>
+              Inscreva seu filho em nossa escola e veja-o florescer em um ambiente acolhedor, seguro e estimulante.
+            </p>
+          </header>
+          <img class="illustration" src="assets/Illustration.png" alt="ilustração crianças e professora">
         </div>
-
-        <div class="container-input">
-          <label>Sexo</label>
-          <select class="input-default">
-            <option>Masculino</option>
-            <option>Feminino</option>
-          </select>
-        </div>
-        <div class="container-input">
-          <label>Informações médicas</label>
-          <textarea class=""></textarea>
-        </div>
-
-        <div class="container-input">
-          <label>Certidão de nascimento</label>
-          <input type="file" />
-        </div>
-      </section>
-    </form>
-</body>
+      </aside>
+    </div>
+  </body>
 </html>
